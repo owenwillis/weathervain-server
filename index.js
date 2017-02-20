@@ -16,6 +16,7 @@ var api = new ParseServer({
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
   appId: process.env.APP_ID || 'APPLICATION_ID',
   masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
+  clientKey: process.env.CLIENT_KEY || '',
   serverURL: process.env.SERVER_URL || 'https://weathervain.herokuapp.com/parse',  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
