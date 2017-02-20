@@ -12,11 +12,11 @@ if (!databaseUri) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://heroku_8jv0gpw7:a2au3q7iskedmpoj5jp950iv57@ds157439.mlab.com:57439/heroku_8jv0gpw7',
+  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'CGRy7drAMWUOlGZywrwQzVBJy1f419hmereK1fw9',
-  masterKey: process.env.MASTER_KEY || 'D7ZvEP9wmKg0vwj6UhN5VidzxP8jxLMqkJpMklCq', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'https://weathervain.herokuapp.com/,  // Don't forget to change to https if needed
+  appId: process.env.APP_ID || 'APPLICATION_ID',
+  masterKey: process.env.MASTER_KEY || 'APPLICATION_KEY', //Add your master key here. Keep it secret!
+  serverURL: process.env.SERVER_URL || 'https://weathervain.herokuapp.com/parse,  // Don't forget to change to https if needed
   liveQuery: {
     classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
   }
